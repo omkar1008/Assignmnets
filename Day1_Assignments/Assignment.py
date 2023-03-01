@@ -4,7 +4,6 @@ largest = 0
 secondlargest = 0
 smallest = list1[0]
 
-
 for each in list1:
      if each > largest:
        secondlargest = largest
@@ -17,24 +16,27 @@ for each in list1:
 
 print(largest)
 print(secondlargest)
-print(smallest)
+print(smallest, '\n')
 
-
-list1 = [1, 4, 10, 30, 60, 70, 80, 100]
-list1.pop(2)
+#.Remove 2nd occurrence of 1 using pop
+list1 = [1, 2, 1, 1, 4, 5]
 count = 0
-index = 0
+counter = 0
 for each in list1:
-    if count == 1:
-        index = count
-        list1.pop(index)
-        index = count + 2
-    count = count + 1
+    counter += 1
+    if each == 1:
+        count += 1
+    if count == 2:
+        counter -= 1
+        list1.pop(counter)
+        break
 
-print(list1)
+print(list1, '\n')
 
-list1 = [1, 4, 10, 30, 60, 70, 80 , 100] #delete_index_list = [7, 3, 4] .Delete using pop
-index_list = [7, 3, 4]
+#delete_index_list = [7, 3, 4] .Delete using pop
+list1 = [1, 4, 10, 30, 60, 70, 80 , 100]
+index_list = [3, 7, 4]
+index_list.sort(reverse=True)
 for each in index_list:
     list1.pop(each)
 

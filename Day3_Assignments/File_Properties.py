@@ -12,8 +12,8 @@ def main():
             with open(eachfile) as ip_file:
                 print("file name:", os.path.basename(eachfile))
                 for eachline in ip_file:
-                    count = count + 1
-                    numberOfCharacters = numberOfCharacters + len(eachline)
+                    count += 1
+                    numberOfCharacters += len(eachline)
                 print('number of lines:', count)
                 print('No of characters:', numberOfCharacters)
                 print('Size:', os.path.getsize(eachfile), 'bytes')

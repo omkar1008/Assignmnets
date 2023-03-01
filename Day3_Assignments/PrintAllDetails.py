@@ -9,7 +9,6 @@ def main():
             with open(eachfile) as ip_file:
                 for line in ip_file:
                     line = line.strip()
-
                     print(line)
 
         print('\n')
